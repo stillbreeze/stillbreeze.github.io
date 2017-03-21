@@ -9,8 +9,8 @@ Before this, I had a wonderful time at Cube26 reserach lab as a research enginee
 
 ### About this blog
 
-If it wasn't for all the lateral learning I got from research, this blog would have been purely about machine learning. But due to the surprising interconnectedness of reseach and a number of topics like technology, startups, social implications of machine learning and life in general, this blog will probably not be confined to purely technical posts. Ping me if you have something interesting to talk about!
+If it wasn't for all the lateral learning I got from research, this blog would have been purely about machine learning. But due to the surprising interconnectedness of research and a number of topics like technology, startups, social implications of machine learning and life in general, this blog will probably not be confined to purely technical posts. Ping me if you have something interesting to talk about!
 
 ### Contact me
 
-[email@domain.com](mailto:asharjaved7@gmail.com)
+[asharjaved7@gmail.com](mailto:asharjaved7@gmail.com)
