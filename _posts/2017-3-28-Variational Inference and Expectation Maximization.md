@@ -36,7 +36,7 @@ the probability distribution $$p$$ is parametrized by $$\theta$$, ie $$\theta$$ 
 
 #### Variational Inference
 
-Variational inference is a method which tries do inference in complicated graphical models where the distribution to be computed is intractable. It does this by re-framing the inference problem into an optimization problem. In the Bayesian framework, inference is formulated as computing the posterior distribution over the set of latent variables:
+Variational inference is a method which tries to do inference in complicated graphical models where the distribution to be computed is intractable. It does this by re-framing the inference problem into an optimization problem. In the Bayesian framework, inference is formulated as computing the posterior distribution over the set of latent variables:
 
 
 <center>$$p(Z \mid X;\theta) = \frac{p(X,Z;\theta)}{\int_Z p(X,Z;\theta)}$$</center>
