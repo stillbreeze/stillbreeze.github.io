@@ -19,8 +19,10 @@ html {
 
 body {
 	background: $white;
-  font: 14px/1.4 $helvetica;
+  font: 14px/1.4;
+  font-family: 'Raleway';
   color: $darkGray;
+  line-height: 1.7;
 }
 
 .container {
@@ -31,12 +33,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: 'Raleway', sans-serif;
   color: $darkerGray;
   font-weight: bold;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 1em 0 25px;
   padding: 0;
 
   @include mobile {
@@ -45,24 +47,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 30px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 26px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h4 {
+  font-size: 22px;
+  color: $gray;
+  margin: 1em 0 15px;
+}
+
+h5 {
   font-size: 16px;
   color: $gray;
+  margin: 1em 0 15px;
 }
+
 
 p {
   margin: 15px 0;
@@ -197,7 +207,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -216,7 +226,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
 
   @include mobile {

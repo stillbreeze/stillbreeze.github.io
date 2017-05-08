@@ -30,7 +30,7 @@ What this means mathematically is:
 **M step**: Maximize $$Q(\theta, \theta_t)$$ wrt to $$\theta$$
 
 where 
-<center>$$Q(\theta, \theta_t) = \mathbb E_{p(Z|X)}[\log p(X,Z;\theta)]$$</center>
+<center>$$Q(\theta, \theta_t) = \mathbb E_{p(Z \mid X)}[\log p(X,Z;\theta)]$$</center>
 and
 the probability distribution $$p$$ is parametrized by $$\theta$$, ie $$\theta$$ is the model parameter.
 
@@ -39,10 +39,10 @@ the probability distribution $$p$$ is parametrized by $$\theta$$, ie $$\theta$$ 
 Variational inference is a method which tries do inference in complicated graphical models where the distribution to be computed is intractable. It does this by re-framing the inference problem into an optimization problem. In the Bayesian framework, inference is formulated as computing the posterior distribution over the set of latent variables:
 
 
-<center>$$p(Z|X;\theta) = \frac{p(X,Z;\theta)}{\int_Z p(X,Z;\theta)}$$</center>
+<center>$$p(Z \mid X;\theta) = \frac{p(X,Z;\theta)}{\int_Z p(X,Z;\theta)}$$</center>
 
 
-The integral in the denominator is intractable for a lot of distributions of interest. So, the problem boils down to finding close approximations for it. There are sampling based techniques like MCMC which do this by constructing a Markov chain with the latent variables, but they are very slow to converge. Instead, what VI does is replace the intractable distribution, $$p(Z\|X;\theta)$$ by a proxy distribution, $$q(Z)$$ and perform inference on it. For this to work out, the following needs to be taken care of:
+The integral in the denominator is intractable for a lot of distributions of interest. So, the problem boils down to finding close approximations for it. There are sampling based techniques like MCMC which do this by constructing a Markov chain with the latent variables, but they are very slow to converge. Instead, what VI does is replace the intractable distribution, $$p(Z \mid X;\theta)$$ by a proxy distribution, $$q(Z)$$ and perform inference on it. For this to work out, the following needs to be taken care of:
 
 1. The proxy distribution should closely resemble the original posterior
 2. The proxy distribution should be simple enough to perform inference on
@@ -52,8 +52,8 @@ For measuring deviation from the posterior, we use the KL divergence of the prox
 <center>
 $$
 	\begin{align}
-		KL(q(Z)||p(Z|X)) & = \mathbb E_{q(Z)}[\log \frac{q(Z)}{p(Z|X)}]\\
-		& = \mathbb E_{q(Z)}[\log q(Z)] - \mathbb E_{q(Z)}[\log p(Z|X)]\\
+		KL(q(Z)||p(Z \mid X)) & = \mathbb E_{q(Z)}[\log \frac{q(Z)}{p(Z \mid X)}]\\
+		& = \mathbb E_{q(Z)}[\log q(Z)] - \mathbb E_{q(Z)}[\log p(Z \mid X)]\\
 		& = \mathbb E_{q(Z)}[\log q(Z)] - \mathbb E_{q(Z)}[\log p(X,Z)] + \log(p(X))\tag{1}\\
 	\end{align}
 $$
@@ -92,7 +92,7 @@ The important thing to notice here is that equation $$2$$ places a lower bound o
 Now, we go back to our equation $$1$$ and find that the RHS of both equations have the common term ELBO.
 In fact, substituting ELBO in the first equation gives us:
 
-<center>$$KL(q(Z)||p(Z|X)) = -ELBO + \log(p(X))\tag{3}$$</center>
+<center>$$KL(q(Z)||p(Z \mid X)) = -ELBO + \log(p(X))\tag{3}$$</center>
 
 Finally, coming back to our original problem of minimizing the KL divergence, we can see that since the second term on the RHS of equation $$3$$ is indepedent of $$q$$, minimizing the KL divergence is the same as maximizing the ELBO. Furthermore, we also have seen that the log probability of the data has a lower bound called ELBO and the gap between them is quantified by the KL divergence term between the approximating distribution and the original posterior.
 
@@ -114,18 +114,18 @@ The two steps can be re-stated more generally in the following manner:
 This step does coordinate ascent on $$ELBO(q,\theta_t)$$ at iteration $$t$$.\\
 Since we know that the optimal $$q$$ for the above problem will occur when the approximate distribution equals the original posterior, the solution to the above problem trivially becomes
 
-<center>$$q_t(Z) = p(Z|X)\tag{5}$$</center>
+<center>$$q_t(Z) = p(Z \mid X)\tag{5}$$</center>
 
 Note that this step is the same as estimating the function $$Q(\theta,\theta_t)$$ as done in the E-step of EM described above. It assumes that the approximating distribution is the same as the posterior. 
 
 **M step**:
 <center>$$\mathop{\arg\,\max}\limits_\theta (ELBO(q_t,\theta))$$</center>
 Substituting the ELBO value from equation $$4$$ and substituting the E step value from equation $$5$$, we have
-<center>$$\mathop{\arg\,\max}\limits_\theta (E_{p(Z|X)}[\log(p(X,Z;\theta)] - E_{p(Z|X)}[\log(p(Z|X))])$$</center>
+<center>$$\mathop{\arg\,\max}\limits_\theta (E_{p(Z \mid X)}[\log(p(X,Z;\theta)] - E_{p(Z \mid X)}[\log(p(Z \mid X))])$$</center>
 
 Since the second expectation term is independent of $$\theta$$, the problem simplifies to the original M-step of the EM algorithm as described above.
 
-<center>$$\mathop{\arg\,\max}\limits_\theta (E_{p(Z|X)}[\log(p(X,Z;\theta)])$$</center>
+<center>$$\mathop{\arg\,\max}\limits_\theta (E_{p(Z \mid X)}[\log(p(X,Z;\theta)])$$</center>
 
 #### Conclusion
 
