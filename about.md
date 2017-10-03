@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-I'm currently a research assistant at IIIT-Hyderabad's CVIT lab, working under Dr Vineet Gandhi on weakly supervised learning.
+I'm currently a research assistant at IIIT-Hyderabad's CVIT lab, working under Dr Vineet Gandhi on weakly and self supervised learning.
 Before this, I had a wonderful time at Cube26 reserach lab as a research engineer, working on machine learning problems in vision, text and speech with a bunch of very smart folks.
 
 ### About this blog
