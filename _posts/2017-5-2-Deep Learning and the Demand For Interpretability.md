@@ -65,7 +65,7 @@ There has been a lot of work in trying to make deep models more explainable. For
 	In contrast to the previous class of models, this approach results general explainability. Although there's a lot of work done to explore how neural networks learn, they don't necessarily translate to how they arrive at the predictions.
 
 
-	From my observations, the 'black-boxness' of deep learning is overhyped in some situations while in others it is underestimated. In the practical world, interpretability is needed only in specific circumstances and might serve a very different purpose than what research-world interpretability is expected to do. In any case, as we go forward, we will be seeing much more work on both these end-goals of having explainable models.
+From my observations, the 'black-boxness' of deep learning is overhyped in some situations while in others it is underestimated. In the practical world, interpretability is needed only in specific circumstances and might serve a very different purpose than what research-world interpretability is expected to do. In any case, as we go forward, we will be seeing much more work on both these end-goals of having explainable models.
 
 
 
