@@ -27,7 +27,7 @@ The authors contend that humans have a foundational basis of understanding certa
 
 ###### 1.1. Intuitive physics
 
-Children have a developed intuitive physical state representation which gives an approximate, probabilisitc and oversimplified account of the the physical world and its interactions. Many recent works have tried to embed deep learning models within a physics simulation engine from which it can learn this notion of intuitive physics, but how well it incorporates the physical rules of world, whether it can learn with as few experiences as humans do and how we evaluate what they have learnt are all challenging problems.
+Children have a developed intuitive physical state representation which gives an approximate, probabilistic and oversimplified account of the the physical world and its interactions. Many recent works have tried to embed deep learning models within a physics simulation engine from which it can learn this notion of intuitive physics, but how well it incorporates the physical rules of world, whether it can learn with as few experiences as humans do and how we evaluate what they have learnt are all challenging problems.
 
 ###### 1.2. Intuitive psychology
 
@@ -35,7 +35,7 @@ How children perceive world agents like other humans or animate objects and how 
 
 ##### 2. Learning as rapid model building
 
-Humans have an amazing capacity for generalizing with few examples. We can see, relate, imagine and describe new concepts and make plausible inferences about them. Moreover, there is considerable evidence that this few-shot learning occurs on top of domain knowledge of various other classes of concepts (we can mentally picture a monkey with wings roller skating on the road because we have previous knowledge about the mentioned objects and their functional nature). The question is how to integrate various domain knowledge into current ML models to enable rapid model bulding.
+Humans have an amazing capacity for generalizing with few examples. We can see, relate, imagine and describe new concepts and make plausible inferences about them. Moreover, there is considerable evidence that this few-shot learning occurs on top of domain knowledge of various other classes of concepts (we can mentally picture a monkey with wings roller skating on the road because we have previous knowledge about the mentioned objects and their functional nature). The question is how to integrate various domain knowledge into current ML models to enable rapid model building.
 
 ###### 2.1. Compositionality
 
@@ -68,14 +68,14 @@ There are 27 commentaries on the above summarized Lake et al. paper, but I have 
 ##### 1. The architecture challenge: Future artificial-intelligence systems will require sophisticated architectures, and knowledge of the brain might guide their construction by Baldassarre et al
 
 - Developing new architectures is essential for human-level AI systems.
-- Looking at the brain can provide guidance as to which architecture spaces to look at for navigating through the tons of possible architectures. Eg. Cortex is organised along multiple cortical pathways which are hierarchical with higher ones focussing on motivation information and lower ones on sensation.
+- Looking at the brain can provide guidance as to which architecture spaces to look at for navigating through the tons of possible architectures. Eg. Cortex is organised along multiple cortical pathways which are hierarchical with higher ones focusing on motivation information and lower ones on sensation.
 
 ##### 2. Building machines that learn and think for themselves by Botvinick et al
 
 - Agree with the list of ingredients, but focus should be on autonomy to reach these goals (agents learn their own internal models and how to use them instead of relying on human engineering).
 - Learning agents should be able to capable across multiple domains without needing too much of priori knowledge.
 - The idea is to use high-level prior knowledge like general structures about compositionality or causality (just like translational invariance was built into CNNs) along with large-scale and general architectures and algorithms like attentional filtering, learning through intrinsic motivation, episodic learning and memory augmented systems.
-- Models should be calibrated not just to individual tasks but to a distrbution of tasks, learnt through experience and evolution. Thus, autonomously learning of internal models such that these models can be shaped by specific set of tasks is advantageous.
+- Models should be calibrated not just to individual tasks but to a distribution of tasks, learnt through experience and evolution. Thus, autonomously learning of internal models such that these models can be shaped by specific set of tasks is advantageous.
 - Autonomy also depends on control functions (processes that use the model to make decisions). Even these control functions should co-evolve with models over time, hence agent-based approaches are important to develop.
 - Model free methods might be primarily important. It's premature to relate them to a supporting role.
 
@@ -117,7 +117,7 @@ There are 27 commentaries on the above summarized Lake et al. paper, but I have 
 
 ##### 9. Crossmodal lifelong learning in hybrid neural embodied architectures by Wermter et al
 
-- Lifelong learning through experiencing the 'world' is the next big direction for ML systems. Additionally, these models should facilitate cross-modal learning to make sonse of the multimodal stimuli of the environment.
+- Lifelong learning through experiencing the 'world' is the next big direction for ML systems. Additionally, these models should facilitate cross-modal learning to make sense of the multimodal stimuli of the environment.
 
 - Startup-software is tightly coupled with the general learning mechanisms of the brain. Past research suggests that architectural mechanisms like different timings in information processing in the cortex, foster compositionality, that in turn enables more complex actions.
 

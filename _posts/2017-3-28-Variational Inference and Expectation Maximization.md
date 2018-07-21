@@ -19,7 +19,7 @@ The post assumes the reader is familiar with the EM algorithm, but if you need a
 
 EM is used to estimate the maximum likelihood of data given the model parameters in cases where the data has some latent variables. In order to do so, EM repeats the following two steps until convergence:
 
-**E step**: Estimate the latent variables according to posterior distribution calculated with the model paramaters\\
+**E step**: Estimate the latent variables according to posterior distribution calculated with the model parameters\\
 **M step**: Update the model parameters by maximizing the likelihood
 
 <br><br>
@@ -34,7 +34,7 @@ What this means mathematically is:
 where 
 <center>$$Q(\theta, \theta_t) = \mathbb E_{p(Z \mid X)}[\log p(X,Z;\theta)]$$</center>
 and
-the probability distribution $$p$$ is parametrized by $$\theta$$, ie $$\theta$$ is the model parameter.
+the probability distribution $$p$$ is parameterized by $$\theta$$, ie $$\theta$$ is the model parameter.
 
 #### Variational Inference
 
@@ -96,7 +96,7 @@ In fact, substituting ELBO in the first equation gives us:
 
 <center>$$KL(q(Z)||p(Z \mid X)) = -ELBO + \log(p(X))\tag{3}$$</center>
 
-Finally, coming back to our original problem of minimizing the KL divergence, we can see that since the second term on the RHS of equation $$3$$ is indepedent of $$q$$, minimizing the KL divergence is the same as maximizing the ELBO. Furthermore, we also have seen that the log probability of the data has a lower bound called ELBO and the gap between them is quantified by the KL divergence term between the approximating distribution and the original posterior.
+Finally, coming back to our original problem of minimizing the KL divergence, we can see that since the second term on the RHS of equation $$3$$ is independent of $$q$$, minimizing the KL divergence is the same as maximizing the ELBO. Furthermore, we also have seen that the log probability of the data has a lower bound called ELBO and the gap between them is quantified by the KL divergence term between the approximating distribution and the original posterior.
 
 #### EM as a special case of Variational Inference
 
