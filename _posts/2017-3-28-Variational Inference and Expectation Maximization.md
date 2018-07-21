@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: Variational Inference and Expectation Maximization
+excerpt: Exploring the relationship between variational inference and expectation maximization algorithm
 ---
 
 Few days ago, while reading about variational autoencoders, I came to know that variational inference was in fact a generalization of the popular algorithm, expectation maximization (EM). The aim of writing this post is to explain the relationship between these two popular techniques. 
