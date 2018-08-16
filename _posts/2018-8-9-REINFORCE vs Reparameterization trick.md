@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: REINFORCE vs Reparameterization trick
+title: REINFORCE vs Reparameterization Trick
 excerpt: An introduction and comparison of two popular techniques for estimating gradients in machine learning models
 ---
 
