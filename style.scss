@@ -124,6 +124,20 @@ img {
   margin: 0 auto;
 }
 
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #000000;
+}
+
+th{
+    border:1px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
@@ -296,20 +310,6 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
-}
-
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    border:1px solid #000000;
-}
-
-th{
-    border:1px solid #000000;
-}
-
-td{
-    border:1px solid #000000;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
