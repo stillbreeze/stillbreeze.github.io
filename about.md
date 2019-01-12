@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-I am an incoming graduate student at the Robotics Institute at CMU. Earlier, I spent a wonderful year as a research assistant at IIIT-Hyderabad's CVIT lab, working under Dr Vineet Gandhi on self supervised learning in vision and langauge, perception in autonomous vehicles and realtime video stabilization. Prior to this, I was a research engineer at Cube26 lab (acquired by Paytm), working on machine learning problems in vision, text and speech with a bunch of very interesting folks. Here's my complete [**resume**](../cv.pdf).
+I am a masters student at the Robotics Institute at Carnegie Mellon University, working with [Professor Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/) on visual grounding and language, and with [Professor Michael Kaess](http://frc.ri.cmu.edu/~kaess/) and the team from Amazon Lab126 on online camera calibration for visual SLAM. Earlier, I spent a wonderful year as a research assistant at IIIT-Hyderabad's [CVIT lab](https://cvit.iiit.ac.in/), working with [Professor Vineet Gandhi](https://faculty.iiit.ac.in/~vgandhi/) on self supervised learning in vision and langauge, perception in autonomous vehicles and realtime video stabilization. Prior to this, I was a research engineer at Cube26 lab (acquired by Paytm), working on machine learning problems in vision, text and speech with a bunch of very interesting folks. Here's my complete [**resume**](../cv.pdf).
 
 ### About this blog
 

@@ -95,6 +95,6 @@ The key differences between the two gradient estimation techniques are summarize
 
 #### References
 
-[^1]: [http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf](http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf)
+[^1]: [Simple statistical gradient-following algorithms for connectionist reinforcement learning](http://www-anw.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf)
 [^2]: [Gradient Estimation](https://www.sciencedirect.com/science/article/pii/S0927050706130194)
 [^3]: [Automatic Differentiation Variational Inference](https://arxiv.org/pdf/1603.00788.pdf)
