@@ -57,8 +57,8 @@ $$
 	\begin{align}
 		\varepsilon & \sim q(\varepsilon)\tag{7}\\
 		x & = g_{\theta}(\varepsilon)\tag{8}\\
-		\nabla_{\theta}\mathbb E_{x\sim p_{\theta}(x)}[f(x)] & = \nabla_{\theta}\mathbb E_{x\sim q(\varepsilon)}[f(g_{\theta}(\varepsilon))]\tag{9}\\
-		& = \mathbb E_{x\sim q(\varepsilon)}[\nabla_{\theta}f(g_{\theta}(\varepsilon))]\tag{10}\\
+		\nabla_{\theta}\mathbb E_{x\sim p_{\theta}(x)}[f(x)] & = \nabla_{\theta}\mathbb E_{\varepsilon\sim q(\varepsilon)}[f(g_{\theta}(\varepsilon))]\tag{9}\\
+		& = \mathbb E_{\varepsilon\sim q(\varepsilon)}[\nabla_{\theta}f(g_{\theta}(\varepsilon))]\tag{10}\\
 	\end{align}
 $$
 </center>
