@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Optimization On a Manifold
-excerpt: Basic ideas behind optimization on non-Euclidean manifolds and how it ties to the common problem of doing optimization over Lie Groups and arbitrary manifolds in robotics and computer vision 
+excerpt: Basic ideas behind optimization on non-Euclidean manifolds and how it ties to the common problem of doing optimization over Lie Groups in robotics and computer vision 
 published: true
 ---
 
