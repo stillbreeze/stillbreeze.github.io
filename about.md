@@ -9,7 +9,7 @@ I currently work on machine learning research and products for computational can
 
 ### Professional mission
 
-I’m interested in building products which affect people positively and improve the status quo. I’m particularly excited by machine learning research and its role in solving technical problems which have real world impact.
+I’m interested in building things which affect people positively and improve the status quo. I’m particularly excited by machine learning research and its role in solving technical problems which have real world impact.
 
 Some things I deeply value
 1. Ambitious problems
