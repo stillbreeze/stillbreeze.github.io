@@ -18,12 +18,14 @@ html {
 }
 
 body {
-	background: $white;
-  font: 14px/1.4;
-  font-family: 'Raleway';
+  background: $white;
+  font-size: 16px;          /* Larger base font for easier reading */
+  line-height: 1.8;         /* Looser spacing for flow and long reads */
+  font-family: 'Raleway', 'Inter', 'Helvetica Neue', sans-serif;
   color: $darkGray;
-  line-height: 1.7;
+  -webkit-font-smoothing: antialiased; /* smoother rendering */
 }
+
 
 .container {
   margin: 0 auto;
@@ -34,16 +36,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
-  color: $darkerGray;
-  font-weight: bold;
-
-  line-height: 1.7;
-  margin: 1em 0 25px;
-  padding: 0;
-
-  @include mobile {
-    line-height: 1.4;
-  }
+  color: #111;               /* darker, stronger visual anchor */
+  font-weight: 800;          /* stronger than normal bold */
+  line-height: 1.4;          /* tighter for headlines */
+  margin: 1.2em 0 20px;
+  letter-spacing: -0.3px;    /* helps with wide font like Raleway */
 }
 
 h1 {
@@ -79,9 +76,12 @@ h6 {
   margin: 0 0 15px;
 }
 
+
 p {
-  margin: 15px 0;
-  text-align: justify;
+  margin: 18px 0;
+  text-align: left;     /* easier to read than justified text on screen */
+  line-height: 1.8;
+  color: #222;
 }
 
 a {

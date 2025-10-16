@@ -13,7 +13,7 @@ But let’s be real: most agentic demos look slick, then collapse the moment you
 Here’s a sharper lens on where agents shine in the real world, where they stumble, and how to tell the difference.
 
 **TL;DR**: The wrong question: *“What can an agent do?”*  
-The right one is: *“How complex is the task? And how easy is it to spot and fix mistakes?”* 
+The right one is: *“How complex is the task? And how easy is it to spot and fix mistakes?”* It's about the task-agent fit.
 
 
 ### **The Two Axes to Describe your Use-Case**

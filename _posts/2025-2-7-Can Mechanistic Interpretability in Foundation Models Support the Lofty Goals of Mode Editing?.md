@@ -6,7 +6,7 @@ excerpt: Exploring the limitations of Sparse Autoencoders for model intervention
 published: true
 ---
 
-#### What is Mechanistic Interpretability (MI) and how is it different from previous interpretability approaches?
+### What is Mechanistic Interpretability (MI) and how is it different from previous interpretability approaches?
 
 Mechanistic Interpretability (MI) seeks to understand internal mechanisms of how an ML model makes a certain prediction. Unlike previous interpretability methods like saliency maps, feature attributions, or probing classifiers, which try to relate the input to the output, the focus here is studying components of the model which are leading to the output. 
 
@@ -20,7 +20,7 @@ Because MI aims to explain the inner workings of models in a structured and mech
 <img src="/images/sae.png" alt="Sparse Autoencoders" width="70%">
 <br><br>
 
-#### Sparse Autoencoder (SAE) Models in MI  
+### Sparse Autoencoder (SAE) Models in MI  
 
 One of the key techniques used in the MI literature is the Sparse Autoencoder or SAE [[^1]]. SAEs are designed to uncover latent, interpretable features within models by enforcing sparsity constraints during encoding (figure above; credits: [[^2]]).  
 
@@ -31,26 +31,28 @@ In this discussion, I focus specifically on SAEs applied to Vision Foundation Mo
 We’ve been experimenting with FM + SAEs recently in order to extract novel biological phenotypes from pathology images, but also to alleviate reliance on spurious confounders.  
 
 
-#### Why SAEs Fall Short for Model Editing  
+### Why SAEs Fall Short for Model Editing  
 
-- ### **SAE Concept Spaces Differ from Human-Desired Interventions**  
+- #### **SAE Concept Spaces Differ from Human-Desired Interventions**  
   The features learned by an SAE might not necessarily align with the conceptual abstractions that humans care about. This can be something fundamental or an artifact of SAE training.  
 
   When attempting to intervene on a particular model behavior—such as reducing harmful biases or guiding it away from known spurious confounders, the desired concept may not exist within the SAE’s overcomplete basis. This makes direct modifications challenging or even infeasible.  
 
   One example we recently saw was in trying to identify and block an SAE feature of our FM which corresponded to a spurious variable and was getting used partially to classify patient images. Even though the spurious variable is well-defined in the real world, we couldn’t find it expressed in the SAE features (no SAE unit correlated with it).  
 
-- ### **Sparsity Does Not Guarantee Interpretability**  
+- #### **Sparsity Does Not Guarantee Interpretability**  
   SAEs are built on the assumption that enforcing sparsity leads to interpretability. However, sparsity might be a necessary but insufficient condition.  
 
   A stream of work in unsupervised disentangled learning a few years ago is a reminder that sparsity can reduce the number of discrete features to analyze and has some good properties owing to information compression theories, but does not guarantee interpretable concepts.  
 
   Many sparse features may be statistical artifacts rather than meaningful decompositions of model behavior. Consequently, interventions based on these features may be unpredictable or ineffective.  
-- ### **Monosemantic Features Are Only Partially Monosemantic**  
+
+- #### **Monosemantic Features Are Only Partially Monosemantic**  
   While SAEs improve monosemanticity compared to raw foundation model activations, perfect disentanglement remains elusive. Features discovered by SAEs still exhibit some degree of entanglement, meaning that even if a feature strongly correlates with a concept, it is rarely exclusive to it.  
 
   This makes direct editing of individual SAE features an unreliable approach to controlling model behavior. We saw this firsthand where blocking the undesirable units led to a decrease in overall performance. Even if a concept existed in the SAE space, it could be fragmented into multiple units (feature splitting [[^4]]). Similarly, multiple units sometimes expressed the same concept.  
-- ### **Lack of Concept Hierarchies and Relationships**  
+  
+- #### **Lack of Concept Hierarchies and Relationships**  
   SAEs capture isolated features but do not inherently encode relationships between concepts. Many real-world interventions require understanding how concepts are related—hierarchically or contextually.  
 
   There’s semantic structure in the real world which SAEs do not encode by design. For example, real-world concepts have:  
@@ -61,7 +63,7 @@ We’ve been experimenting with FM + SAEs recently in order to extract novel bio
   SAEs lack explicit mechanisms for capturing these dependencies. Even though neural networks dislike forcing such handcrafted structure and inductive biases into model architecture, and I personally don’t believe it is the way to fix it, this limitation reduces the utility of current SAEs for editing. Some work around structured sparsity constraints might be one solution in this direction.  
 
 
-#### **Can We Fix These Issues?**  
+### **Can We Fix These Issues?**  
 
 These issues require more deeper thought and I will add a follow up post on this, but here are some high-level ideas worth pursuing:
 
